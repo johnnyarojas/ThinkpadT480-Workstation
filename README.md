@@ -1,2 +1,2 @@
 # ThinkpadT480-NixOS-Workstation
-A workstation configuration that mixes a personal and academic use in the same machine.
+This configuration aims to provide a configuration.nix file that setups a machine for personal and academic use.
