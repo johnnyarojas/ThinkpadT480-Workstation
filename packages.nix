@@ -65,6 +65,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.vitals
+    gnomeExtensions.grand-theft-focus
 
     ############################################
     #  Games
