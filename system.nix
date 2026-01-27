@@ -4,40 +4,35 @@
   ############################################
   #  Boot + Kernel
   ############################################
-  boot.loader.grub = {
+  boot.loader.systemd-boot = {
     enable = true;
-    efiSupport = true;
-    device = "nodev";
+    editor = false;   # no interactive editing
   };
-  boot.loader.efi.canTouchEfiVariables = true; # Allows NixOS to manage EFI variables
-  boot.kernelPackages = pkgs.linuxPackages_latest; # Latest kernel
-  boot = {
 
-    plymouth = {
-      enable = true;
-      theme = "rings";
-      themePackages = with pkgs; [
-        # By default we would install all themes
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "rings" ];
-        })
-      ];
-    };
+  boot.loader.timeout = 0;  # menu only if Space is pressed
+  boot.loader.efi.canTouchEfiVariables = true;
 
-    # Enable "Silent boot"
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "udev.log_level=3"
-      "systemd.show_status=auto"
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.plymouth = {
+    enable = true;
+    theme = "rings_2";
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override {
+        selected_themes = [ "rings_2" ];
+      })
     ];
-    # Hide the OS choice for bootloaders.
-    # It's still possible to open the bootloader list by pressing any key
-    # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
-
   };
+
+  # Silent / clean boot
+  boot.consoleLogLevel = 3;
+  boot.initrd.verbose = false;
+
+  boot.kernelParams = [
+    "quiet"
+    "udev.log_level=3"
+    "systemd.show_status=auto"
+  ];
 
   ############################################
   #  Hostname & Networking
