@@ -7,6 +7,7 @@
     (
       python311.withPackages (pythonPackages: [
         pythonPackages.jupyterlab
+	pythonPackages.jupyterlab-vim
         pythonPackages.ipykernel
         pythonPackages.numpy
         pythonPackages.pandas
