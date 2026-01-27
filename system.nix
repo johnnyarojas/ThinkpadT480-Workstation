@@ -16,10 +16,10 @@
 
   boot.plymouth = {
     enable = true;
-    theme = "rings_2";
+    theme = "hexagon_dots_alt";
     themePackages = with pkgs; [
       (adi1090x-plymouth-themes.override {
-        selected_themes = [ "rings_2" ];
+        selected_themes = [ "hexagon_dots_alt" ];
       })
     ];
   };
