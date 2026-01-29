@@ -10,6 +10,7 @@
     emacs-gtk
     git
     ganttproject-bin
+    bat
  
     ############################################
     # Office Tools
@@ -32,6 +33,7 @@
     gimp
     kdePackages.kdenlive
     blender
+    krita
 
     ############################################
     # Internet
