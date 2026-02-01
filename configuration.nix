@@ -3,10 +3,10 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./system.nix
-    ./desktop.nix
-    ./users.nix
-    ./packages.nix
+    ./system/system.nix
+    ./system/desktop.nix
+    ./system/users.nix
+    ./system/packages.nix
   ];
 
   system.stateVersion = "25.11";
