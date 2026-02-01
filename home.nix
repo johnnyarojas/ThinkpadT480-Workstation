@@ -32,5 +32,3 @@
 
   programs.home-manager.enable = true;
 }
-
-# This is a comment to test the experimental branch
