@@ -9,11 +9,11 @@
     # 'wheel' = sudo access
     # 'networkmanager' = manage Wi-Fi
     extraGroups = [ "wheel" "networkmanager" "vboxusers" ];
+  };
 
-    # User-specific packages (optional)
-    packages = with pkgs; [
-      # thunderbird
-    ];
-
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.johnny = import ./users/johnny/home.nix;
   };
 }
