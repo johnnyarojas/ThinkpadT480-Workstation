@@ -8,7 +8,7 @@
 
     # 'wheel' = sudo access
     # 'networkmanager' = manage Wi-Fi
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "vboxusers" ];
 
     # User-specific packages (optional)
     packages = with pkgs; [

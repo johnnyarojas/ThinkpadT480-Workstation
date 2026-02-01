@@ -16,9 +16,4 @@
     layout = "us";
     variant = "";
   };
-
-  ############################################
-  #  Touchpad Support (optional)
-  ############################################
-  # services.xserver.libinput.enable = true;
 }
