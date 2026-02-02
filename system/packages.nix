@@ -20,6 +20,7 @@
     lyx
     rnote
     texlive.combined.scheme-full
+    calibre
 
     ############################################
     # Music
