@@ -7,12 +7,12 @@
     ############################################
     vim
     neovim
-    emacs-gtk
     git
     ganttproject-bin
     bat
     cmatrix
- 
+    terminal-toys # <- Added from Surface device
+
     ############################################
     # Office Tools
     ############################################
@@ -20,7 +20,6 @@
     lyx
     rnote
     texlive.combined.scheme-full
-    calibre
 
     ############################################
     # Music
@@ -36,12 +35,12 @@
     kdePackages.kdenlive
     blender
     krita
+    imagemagick # <- Added for support in emacs
 
     ############################################
     # Internet
     ############################################
     firefox
-    chromium
 
     ############################################
     # System
@@ -77,8 +76,9 @@
     prismlauncher
 
     ############################################
-    # Virtualization
+    # Fonts
     ############################################
-    virtualbox
+    nerd-fonts.fira-code # <- Added for support for doom
+
   ];
  }
