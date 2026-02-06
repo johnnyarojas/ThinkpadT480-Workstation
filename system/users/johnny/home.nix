@@ -23,18 +23,20 @@
     package = pkgs.emacs;   # Choose your Emacs variant
   };
 
-  home.packages = with pkgs; [
-    (
-      python311.withPackages (pythonPackages: [
-        pythonPackages.jupyterlab
-	pythonPackages.jupyterlab-vim
-        pythonPackages.ipykernel
-        pythonPackages.numpy
-        pythonPackages.pandas
-        pythonPackages.matplotlib
-      ])
-    )
-  ];
+# JupyterLab Fails Instalation after installing NixOS, it would be better to
+# setup throguh conda
+#  home.packages = with pkgs; [
+#    (
+#      python311.withPackages (pythonPackages: [
+#        pythonPackages.jupyterlab
+#        pythonPackages.jupyterlab-vim
+#        pythonPackages.ipykernel
+#        pythonPackages.numpy
+#        pythonPackages.pandas
+#        pythonPackages.matplotlib
+#      ])
+#    )
+#  ];
 
   programs.home-manager.enable = true;
 }

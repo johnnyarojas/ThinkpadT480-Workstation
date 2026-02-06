@@ -12,6 +12,7 @@
     bat
     cmatrix
     terminal-toys # <- Added from Surface device
+    tldr
 
     ############################################
     # Office Tools
