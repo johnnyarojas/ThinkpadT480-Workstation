@@ -42,6 +42,7 @@
   # Use NetworkManager for Wi-Fi + Ethernet handling
   networking.networkmanager.enable = true;
 
+  networking.firewall.allowedTCPPorts = [ 24800 ];
   ############################################
   #  Locale & Time
   ############################################
