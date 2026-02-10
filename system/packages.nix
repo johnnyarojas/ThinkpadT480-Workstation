@@ -54,6 +54,7 @@
     rclone
     hunspell
     hunspellDicts.en_US
+    deskflow
     
     ############################################
     # Social
