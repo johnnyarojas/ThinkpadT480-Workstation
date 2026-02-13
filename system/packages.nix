@@ -61,6 +61,7 @@
     ############################################
     zoom-us
     signal-desktop
+    discord # MOVE EVENTUALLY TO HOME.NIX
     
     ############################################
     # GNOME Extensions
