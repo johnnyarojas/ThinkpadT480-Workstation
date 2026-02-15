@@ -13,6 +13,7 @@
     cmatrix
     terminal-toys # <- Added from Surface device
     tldr
+    conda
 
     ############################################
     # Office Tools
