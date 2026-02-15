@@ -13,7 +13,8 @@
     cmatrix
     terminal-toys # <- Added from Surface device
     tldr
-    conda
+    python312
+    python312Packages.pip
 
     ############################################
     # Office Tools
