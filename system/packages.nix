@@ -1,8 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-let
-  zen = inputs.zen-browser.packages."${pkgs.system}".default;
-in
 {
   environment.systemPackages = with pkgs; [
     ############################################
@@ -47,7 +44,6 @@ in
     # Internet
     ############################################
     firefox
-    zen
 
     ############################################
     # System
