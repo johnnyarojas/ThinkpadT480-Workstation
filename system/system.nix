@@ -96,4 +96,23 @@
   boot.supportedFilesystems = [ "ntfs" ];
   services.udisks2.enable = true;
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
+  environment.sessionVariables = {
+    # This globally exposes the libraries so Python can locate them
+    LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
+      stdenv.cc.cc.lib
+      libz
+      libGL
+    ];
+  };
+
+  # Ensure the hardware/system packages are available globally
+  environment.systemPackages = with pkgs; [
+    python3
+    stdenv.cc.cc.lib
+    libz
+    libGL
+  ];
 }
