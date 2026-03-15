@@ -15,6 +15,7 @@
     tldr
     python312
     python312Packages.pip
+    mpv
 
     ############################################
     # Office Tools
@@ -23,6 +24,7 @@
     lyx
     rnote
     texlive.combined.scheme-full
+    obs-studio
 
     ############################################
     # Music
@@ -30,6 +32,7 @@
     youtube-music
     musescore
     muse-sounds-manager
+    ardour
 
     ############################################
     # Graphics
@@ -57,6 +60,7 @@
     hunspell
     hunspellDicts.en_US
     deskflow
+    ffmpeg
     
     ############################################
     # Social
