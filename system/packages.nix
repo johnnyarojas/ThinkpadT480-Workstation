@@ -90,6 +90,7 @@
     ############################################
     nerd-fonts.fira-code # <- Added for support for doom
     lmodern
+    pixel-code
 
   ];
  }
