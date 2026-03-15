@@ -42,6 +42,7 @@
     blender
     krita
     imagemagick # <- Added for support in emacs
+    inkscape
 
     ############################################
     # Internet
