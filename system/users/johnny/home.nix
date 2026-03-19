@@ -24,4 +24,49 @@
   };
 
   programs.home-manager.enable = true;
+
+
+# mbsync
+  programs.mbsync.enable = true;
+  programs.msmtp.enable = true;
+  programs.mu.enable = true;
+
+  accounts.email = {
+    maildirBasePath = "Mail";
+
+    accounts = {
+      "gmail-personal" = {
+        address = "johnny.rojas.me@gmail.com";
+        userName = "johnny.rojas.me@gmail.com";
+        flavor = "gmail.com";
+        passwordCommand = "cat /home/johnny/.secrets/gmail-personal";
+        primary = true;
+
+        mbsync = {
+          enable = true;
+          create = "maildir";
+          expunge = "both";
+        };
+
+        msmtp.enable = true;
+        mu4e.enable = true;
+      };
+
+      "gmail-work" = {
+        address = "johnny.rojas.k@gmail.com";
+        userName = "johnny.rojas.k@gmail.com";
+        flavor = "gmail.com";
+        passwordCommand = "cat /home/johnny/.secrets/gmail-academic";
+
+        mbsync = {
+          enable = true;
+          create = "maildir";
+          expunge = "both";
+        };
+
+        msmtp.enable = true;
+        mu4e.enable = true;
+      };
+    };
+  };
 }
