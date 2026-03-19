@@ -33,6 +33,7 @@
     musescore
     muse-sounds-manager
     ardour
+    portaudio
 
     ############################################
     # Graphics
