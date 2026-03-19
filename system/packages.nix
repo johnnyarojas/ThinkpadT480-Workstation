@@ -16,6 +16,7 @@
     python312
     python312Packages.pip
     mpv
+    claude-code
 
     ############################################
     # Office Tools

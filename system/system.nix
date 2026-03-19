@@ -115,4 +115,16 @@
     libz
     libGL
   ];
+
+  ############################################
+  # Text to Speech Service
+  ############################################
+  systemd.user.services.piper-speak = {
+    description = "Piper TTS Socket Server";
+    wantedBy = [ "default.target" ];
+    serviceConfig = {
+      ExecStart = "/home/johnny/Documents/Personal/Programming/tts/start-server.sh";
+      Restart = "on-failure";
+    };
+  };
 }
