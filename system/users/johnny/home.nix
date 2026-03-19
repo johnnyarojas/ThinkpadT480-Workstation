@@ -49,7 +49,6 @@
         };
 
         msmtp.enable = true;
-        mu4e.enable = true;
       };
 
       "gmail-work" = {
@@ -65,7 +64,6 @@
         };
 
         msmtp.enable = true;
-        mu4e.enable = true;
       };
     };
   };
