@@ -45,6 +45,7 @@
     krita
     imagemagick # <- Added for support in emacs
     inkscape
+    darktable
 
     ############################################
     # Internet
