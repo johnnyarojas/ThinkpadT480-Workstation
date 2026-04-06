@@ -26,6 +26,7 @@
     rnote
     texlive.combined.scheme-full
     obs-studio
+    wordbook
 
     ############################################
     # Music
@@ -94,6 +95,8 @@
     nerd-fonts.fira-code # <- Added for support for doom
     lmodern
     pixel-code
+    jetbrains-mono
+    newcomputermodern
 
     ############################################
     # Engineering
