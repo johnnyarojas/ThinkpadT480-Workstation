@@ -36,6 +36,7 @@
     muse-sounds-manager
     ardour
     portaudio
+    audacity
 
     ############################################
     # Graphics
