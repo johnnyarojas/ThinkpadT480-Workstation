@@ -8,6 +8,10 @@
     vim
     neovim
     git
+    gcc
+    gnumake
+    cmake
+    ffmpeg
     ganttproject-bin
     bat
     cmatrix
@@ -17,6 +21,10 @@
     python312Packages.pip
     mpv
     claude-code
+    file
+    pyright # A Python Language Server > https://github.com/microsoft/pyright
+    nixd    # A Nix Language Server > https://github.com/nix-community/nixd
+    direnv  # Enviroment Loader
 
     ############################################
     # Office Tools
@@ -48,6 +56,7 @@
     imagemagick # <- Added for support in emacs
     inkscape
     darktable
+    upscayl # Free and Open Source Image Upscaler
 
     ############################################
     # Internet
@@ -65,8 +74,8 @@
     rclone
     hunspell
     hunspellDicts.en_US
+    hunspellDicts.es-pe
     deskflow
-    ffmpeg
     
     ############################################
     # Social
