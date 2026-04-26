@@ -35,6 +35,7 @@
     texlive.combined.scheme-full
     obs-studio
     wordbook
+    geogebra
 
     ############################################
     # Music
