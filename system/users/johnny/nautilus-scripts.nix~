@@ -1,0 +1,38 @@
+{ pkgs, ... }:
+
+let
+  rnoteTemplate = ./rnote_template.rnote;
+
+  createRnoteNote = pkgs.writeShellScriptBin "create-rnote-note" ''
+    set -eu
+
+    if [ -n "''${NAUTILUS_SCRIPT_CURRENT_URI:-}" ]; then
+      dir=$(printf '%s' "$NAUTILUS_SCRIPT_CURRENT_URI" | sed 's|^file://||; s|%20| |g')
+    else
+      dir="$PWD"
+    fi
+
+    base="$(date +%Y-%m-%d)_Note"
+    dest="$dir/$base.rnote"
+
+    if [ -e "$dest" ]; then
+      n=2
+      while [ -e "$dir/''${base} ($n).rnote" ]; do
+        n=$((n + 1))
+      done
+      dest="$dir/''${base} ($n).rnote"
+    fi
+
+    filename=$(basename "$dest")
+    cp "${rnoteTemplate}" "$dest"
+    zenity --info --text="Created: $filename" 2>/dev/null || echo "Created: $dest"
+  '';
+in
+{
+  home.packages = [ createRnoteNote ];
+
+  home.file.".local/share/nautilus/scripts/Create rnote Note" = {
+    source = "${createRnoteNote}/bin/create-rnote-note";
+    executable = true;
+  };
+}

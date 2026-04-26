@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./nautilus-scripts.nix
+  ];
+  
   home.stateVersion = "25.11";
 
   programs.neovim = {
