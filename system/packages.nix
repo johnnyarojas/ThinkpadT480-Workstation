@@ -36,6 +36,7 @@
     obs-studio
     wordbook
     geogebra
+    kiwix
 
     ############################################
     # Music
