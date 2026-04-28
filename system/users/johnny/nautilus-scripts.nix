@@ -25,6 +25,7 @@ let
 
     filename=$(basename "$dest")
     cp "${rnoteTemplate}" "$dest"
+    chmod 644 "$dest"
     zenity --info --text="Created: $filename" 2>/dev/null || echo "Created: $dest"
   '';
 in
